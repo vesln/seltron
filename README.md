@@ -19,6 +19,7 @@ Tiny Selenium spawner.
 
 - java (to run Selenium)
 - wget (to download Selenium)
+- phantomjs, Firefox, Chrome (pick what you want to use)
 
 ## Usage
 
