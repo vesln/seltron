@@ -33,6 +33,13 @@ seltron('phantomjs', 9002, function(err, process) {
 npm install seltron
 ```
 
+## Installing Selenium & ChromeDriver
+
+```bash
+$ git clone vesln/seltron
+$ ./node_modules/seltron/bin/install-selenium
+```
+
 ## Tests
 
 ### Running the tests
