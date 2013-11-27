@@ -11,9 +11,14 @@ Tiny Selenium spawner.
 
 ## Supported drivers
 
-- Chrome
-- Firefox
-- Phantomjs
+- Chrome (chrome)
+- Firefox (firefox)
+- Phantomjs (phantomjs)
+
+## Requirements
+
+- java (to run Selenium)
+- wget (to download Selenium)
 
 ## Usage
 
