@@ -1,0 +1,30 @@
+#!/bin/bash
+
+# Modified version of https://github.com/sebv/sv-selenium
+# Copyright (c) 2012 Sebastien Vincent (MIT License)
+
+DIRNAME="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+SEL_DIR="$DIRNAME/../selenium"
+
+SELENIUM_URL='https://selenium.googlecode.com/files/selenium-server-standalone-2.37.0.jar'
+CHROMEDRIVER_LINUX_URL='http://chromedriver.storage.googleapis.com/2.7/chromedriver_linux32.zip'
+CHROMEDRIVER_MAC_URL='http://chromedriver.storage.googleapis.com/2.7/chromedriver_mac32.zip'
+
+unamestr=`uname`
+if [[ "$unamestr" == 'Linux' ]]; then
+   CHROMEDRIVER_URL=$CHROMEDRIVER_LINUX_URL
+else
+   CHROMEDRIVER_URL=$CHROMEDRIVER_MAC_URL
+fi
+
+rm -rf $SEL_DIR
+mkdir -p $SEL_DIR
+rm -rf $SEL_DIR/selenium-server*
+cd $SEL_DIR
+
+wget $SELENIUM_URL
+mv selenium-server-standalone*.jar selenium-server-standalone.jar
+
+wget $CHROMEDRIVER_URL
+unzip chromedriver*.zip
+rm chromedriver*.zip
