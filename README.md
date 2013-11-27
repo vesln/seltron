@@ -7,7 +7,25 @@
 
 ## Synopsis
 
-## Description
+Tiny Selenium spawner.
+
+## Supported drivers
+
+- Chrome
+- Firefox
+- Phantomjs
+
+## Usage
+
+```js
+seltron('phantomjs', 9002, function(err, process) {
+  if (err) throw err;
+  // start testing!
+
+  // done? kill it!
+  process.kill();
+});
+```
 
 ## Installation
 

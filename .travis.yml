@@ -3,4 +3,5 @@ node_js:
   - 0.8
   - 0.10
 script:
+  - sh ./bin/install-selenium
   - npm test && npm run-script coveralls
