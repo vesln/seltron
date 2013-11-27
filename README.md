@@ -32,6 +32,8 @@ seltron('phantomjs', 9002, function(err, process) {
 });
 ```
 
+You can skip `port` if you wish, it will run Selenium on 4444.
+
 ## Installation
 
 ```bash
@@ -41,7 +43,6 @@ npm install seltron
 ## Installing Selenium & ChromeDriver
 
 ```bash
-$ git clone vesln/seltron
 $ ./node_modules/seltron/bin/install-selenium
 ```
 
